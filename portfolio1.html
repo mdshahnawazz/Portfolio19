@@ -471,6 +471,16 @@ section{
 .footer .follow a:hover{
     background:var(--orange);
 }
+#Counter{
+  background-color:orange;
+  padding:20px ,20px;
+  width:100px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+
+}
+	
 
 /* media queries  */
 
@@ -760,7 +770,14 @@ section{
         <a href="https://www.linkedin.com/in/md-shahnawaz-1837731ab/" class="fab fa-linkedin" style="color:#007bb5"></a>
     </div>
 
-    <div class="credit">created by <span>Faiz Merchant</span> | all rights reserved</div>
+    <div class="credit">created by <span>Faiz Merchant</span> | all rights reserved
+	    <div id="Counter">
+            	<span class="item">0</span>
+            	<span class="item">0</span>
+            	<span class="item">0</span>
+            </div>
+	
+     </div>
 
 </section>
 
@@ -792,6 +809,15 @@ section{
 
 <!-- custom js file link  -->
 <script src="portfolio1.js"></script>
+<script>
+  var n=localStorage.getItem('onload');
+  if(n===null){
+    n=0;
+  }
+  n++;
+  localStorage.setItem('onload',n);
+  document.getElementById('Counter').innerHTML=n;
+</script>	
     
 </body>
 </html>
